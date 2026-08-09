@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hardik Building Material Supplier</title>
-  <meta name="description" content="Hardik Building Material Supplier - Hindware, Grafdoer, Havells, Passero, KAFF, Vectus and Astral products.">
+  <title>Hardik Building Material Supplier | Reengus, Sikar</title>
+  <meta name="description" content="Hardik Building Material Supplier at Lakhani Mod, Reengus, Sikar. Authorized supplier for Hindware, Grafdoer, Havells, Passero, KAFF, Vectus, and Astral.">
 
   <!-- FontAwesome Icons & Google Fonts -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -82,6 +82,16 @@
 
     .logo span {
       color: var(--accent);
+    }
+
+    .logo-sub {
+      font-size: 0.75rem;
+      color: #cbd5e1;
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: 2px;
     }
 
     .nav-right {
@@ -170,6 +180,18 @@
       color: #cbd5e1;
     }
 
+    .hero-address {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 8px 16px;
+      border-radius: 8px;
+      margin-bottom: 24px;
+      font-size: 0.95rem;
+      color: #f1f5f9;
+    }
+
     .buttons {
       display: flex;
       gap: 14px;
@@ -210,6 +232,17 @@
     .btn-light:hover {
       background: #f1f5f9;
       transform: translateY(-3px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: white;
     }
 
     /* SECTIONS */
@@ -436,6 +469,20 @@
     .about p {
       color: #cbd5e1;
       font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    .about-location-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 10px 20px;
+      border-radius: 30px;
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 1rem;
+      margin-top: 15px;
     }
 
     /* CONTACT & FORM */
@@ -461,10 +508,28 @@
       margin-bottom: 15px;
     }
 
+    .address-card {
+      background: var(--bg-color);
+      padding: 16px;
+      border-radius: 14px;
+      margin: 20px 0;
+      border: 1px solid var(--card-border);
+      text-align: left;
+    }
+
+    .address-card-title {
+      font-weight: 700;
+      color: var(--primary-light);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
     .phone {
-      font-size: 26px;
+      font-size: 24px;
       font-weight: 800;
-      margin: 15px 0 25px;
+      margin: 15px 0;
       color: var(--primary-light);
     }
 
@@ -611,8 +676,13 @@
 
     footer p {
       color: #94a3b8;
-      margin-top: 10px;
+      margin-top: 8px;
       font-size: 0.9rem;
+    }
+
+    .footer-address {
+      color: var(--accent) !important;
+      font-weight: 600;
     }
 
     /* FLOATING BUTTONS */
@@ -673,9 +743,14 @@
 
 <header>
   <div class="nav">
-    <div class="logo">
-      <i class="fa-solid fa-boxes-packing" style="color: var(--accent);"></i>
-      Hardik <span>Building Material</span>
+    <div>
+      <div class="logo">
+        <i class="fa-solid fa-boxes-packing" style="color: var(--accent);"></i>
+        Hardik <span>Building Material</span>
+      </div>
+      <div class="logo-sub">
+        <i class="fa-solid fa-location-dot" style="color: var(--accent);"></i> Lakhani Mod, Reengus, Sikar
+      </div>
     </div>
 
     <div class="nav-right">
@@ -695,15 +770,25 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <span class="hero-badge"><i class="fa-solid fa-star"></i> Trusted Supplier</span>
+    <span class="hero-badge"><i class="fa-solid fa-star"></i> Trusted Wholesale Supplier</span>
     <h1>Hardik Building<br>Material Supplier</h1>
-    <p>Quality building, bathroom, kitchen, electrical, plumbing and water-storage products from trusted national brands.</p>
+    
+    <div class="hero-address">
+      <i class="fa-solid fa-location-dot" style="color: var(--accent);"></i>
+      Lakhani Mod, Reengus, Sikar (Raj.)
+    </div>
+
+    <p>Quality building, bathroom, kitchen, electrical, plumbing and water-storage products from top national brands at best rates.</p>
+    
     <div class="buttons">
       <a class="btn btn-whatsapp" href="https://wa.me/919887249240?text=Hello%20Hardik%20Building%20Material%20Supplier,%20I%20want%20to%20know%20about%20your%20products." target="_blank">
         <i class="fa-brands fa-whatsapp"></i> WhatsApp Enquiry
       </a>
       <a class="btn btn-light" href="#products">
         <i class="fa-solid fa-layer-group"></i> Explore Range
+      </a>
+      <a class="btn btn-outline" href="https://maps.google.com/?q=Lakhani+Mod+Reengus+Sikar" target="_blank">
+        <i class="fa-solid fa-map-location-dot"></i> Get Location
       </a>
     </div>
   </div>
@@ -713,7 +798,7 @@
 <section id="brands">
   <div class="section-title">
     <h2>Our Partner Brands</h2>
-    <p>Top national & international quality brands available with us</p>
+    <p>Top national & international quality brands available at Lakhani Mod, Reengus</p>
   </div>
   <div class="brands">
     <div class="brand" onclick="filterByBrand('hindware')">HINDWARE</div>
@@ -866,27 +951,53 @@
     <div class="section-title">
       <h2 style="color: white;">Why Choose Hardik Supplier?</h2>
     </div>
-    <p>We supply complete building, bathroom, kitchen, electrical, and plumbing solutions at wholesale and retail rates. Connect with us for model availability, catalogues, and bulk pricing.</p>
+    <p>We supply complete building, bathroom, kitchen, electrical, and plumbing solutions at wholesale and retail rates.</p>
+    <p>Visit our outlet for live model displays, catalogues, and best discounted rates.</p>
+    
+    <div class="about-location-tag">
+      <i class="fa-solid fa-location-pin"></i> Lakhani Mod, Reengus, Sikar
+    </div>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="contact">
   <div class="section-title">
-    <h2>Get in Touch</h2>
-    <p>Direct communication for quick orders and pricing</p>
+    <h2>Get in Touch & Visit Us</h2>
+    <p>Direct communication for quick orders, pricing, and shop location</p>
   </div>
 
   <div class="contact-container">
     <div class="contact-box">
       <h3>Hardik Building Material Supplier</h3>
+      
+      <!-- STORE ADDRESS DISPLAY -->
+      <div class="address-card">
+        <div class="address-card-title">
+          <i class="fa-solid fa-store"></i> Store Address
+        </div>
+        <p style="color: var(--text-main); font-weight: 600; margin-bottom: 2px;">
+          Lakhani Mod, Reengus
+        </p>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">
+          Dist. Sikar, Rajasthan - 332404
+        </p>
+      </div>
+
       <div class="phone"><i class="fa-solid fa-phone"></i> 9887249240</div>
+      
       <div class="buttons" style="justify-content:center">
         <a class="btn btn-whatsapp" href="https://wa.me/919887249240?text=Hello%20Hardik%20Building%20Material%20Supplier,%20I%20want%20to%20make%20a%20product%20enquiry." target="_blank">
           <i class="fa-brands fa-whatsapp"></i> WhatsApp
         </a>
         <a class="btn btn-light" href="tel:+919887249240">
           <i class="fa-solid fa-phone-flip"></i> Call Now
+        </a>
+      </div>
+
+      <div style="margin-top: 15px;">
+        <a class="small-btn" href="https://maps.google.com/?q=Lakhani+Mod+Reengus+Sikar" target="_blank" style="width: 100%; justify-content: center; padding: 12px;">
+          <i class="fa-solid fa-map-location-dot"></i> Open Google Maps Direction
         </a>
       </div>
     </div>
@@ -977,6 +1088,7 @@
 <!-- FOOTER -->
 <footer>
   <strong>Hardik Building Material Supplier</strong>
+  <p class="footer-address"><i class="fa-solid fa-location-dot"></i> Lakhani Mod, Reengus, Sikar (Rajasthan) - 332404</p>
   <p>Hindware • Grafdoer • Havells • Passero • KAFF • Vectus • Astral</p>
   <p>© 2026 Hardik Building Material Supplier. All Rights Reserved.</p>
 </footer>
@@ -1062,14 +1174,14 @@
 
   function sendModalEnquiry() {
     let name = document.getElementById('modalCustName').value || 'Customer';
-    let fullMsg = `Hello Hardik Building Material Supplier, My name is ${name}. I want to inquire about ${selectedBrand} products.`;
+    let fullMsg = `Hello Hardik Building Material Supplier (Reengus), My name is ${name}. I want to inquire about ${selectedBrand} products.`;
     let url = `https://wa.me/919887249240?text=${encodeURIComponent(fullMsg)}`;
     window.open(url, '_blank');
     closeModal('enquiryModal');
   }
 
   function enquireSpecificProduct(productDetails) {
-    let fullMsg = `Hello Hardik Building Material Supplier, I am interested in ${productDetails}. Please share price & availability.`;
+    let fullMsg = `Hello Hardik Building Material Supplier (Reengus), I am interested in ${productDetails}. Please share price & availability.`;
     let url = `https://wa.me/919887249240?text=${encodeURIComponent(fullMsg)}`;
     window.open(url, '_blank');
   }
@@ -1079,7 +1191,7 @@
     e.preventDefault();
     let name = document.getElementById('custName').value;
     let msg = document.getElementById('custMsg').value;
-    let fullMsg = `Hello Hardik Building Material Supplier, My name is ${name}. ${msg}`;
+    let fullMsg = `Hello Hardik Building Material Supplier (Reengus), My name is ${name}. ${msg}`;
     let url = `https://wa.me/919887249240?text=${encodeURIComponent(fullMsg)}`;
     window.open(url, '_blank');
   });
