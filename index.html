@@ -3,34 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Hardik Building Material Supplier</title>
+  <meta name="description" content="Hardik Building Material Supplier - Hindware, Grafdoer, Havells, Passero, KAFF, Vectus and Astral products.">
 
-  <meta name="description"
-        content="Hardik Building Material Supplier - Hindware, Grafdoer, Havells, Passero, KAFF, Vectus and Astral products.">
+  <!-- FontAwesome Icons & Google Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
+    :root {
+      --bg-color: #f5f7fa;
+      --card-bg: #ffffff;
+      --text-main: #172033;
+      --text-muted: #657084;
+      --primary: #0b1f3a;
+      --primary-light: #164d8b;
+      --accent: #ffd166;
+      --whatsapp: #25D366;
+      --whatsapp-hover: #20ba5a;
+      --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+      --nav-bg: linear-gradient(135deg, #0b1f3a, #164d8b);
+    }
+
+    [data-theme="dark"] {
+      --bg-color: #0f172a;
+      --card-bg: #1e293b;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --primary: #1e293b;
+      --primary-light: #38bdf8;
+      --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+      --nav-bg: rgba(15, 23, 42, 0.95);
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+      scroll-behavior: smooth;
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f5f7fa;
-      color: #172033;
+      font-family: 'Poppins', Arial, sans-serif;
+      background: var(--bg-color);
+      color: var(--text-main);
       line-height: 1.6;
+      transition: background-color 0.3s, color 0.3s;
     }
 
+    /* HEADER & NAV */
     header {
-      background: linear-gradient(135deg, #0b1f3a, #164d8b);
+      background: var(--nav-bg);
       color: white;
-      padding: 18px 6%;
+      padding: 15px 6%;
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 3px 15px rgba(0,0,0,.15);
+      box-shadow: 0 3px 15px rgba(0,0,0,.2);
+      backdrop-filter: blur(10px);
     }
 
     .nav {
@@ -43,32 +73,55 @@
     .logo {
       font-size: 22px;
       font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
     .logo span {
-      color: #ffd166;
+      color: var(--accent);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      margin-left: 18px;
       font-weight: 600;
+      transition: color 0.2s;
     }
 
     nav a:hover {
-      color: #ffd166;
+      color: var(--accent);
     }
 
+    .theme-toggle {
+      background: rgba(255, 255, 255, 0.15);
+      border: none;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+
+    .theme-toggle:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    /* HERO */
     .hero {
-      min-height: 500px;
+      min-height: 520px;
       display: flex;
       align-items: center;
       padding: 70px 6%;
-      background:
-        linear-gradient(rgba(8,24,45,.78), rgba(8,24,45,.78)),
-        url("https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1800&q=85")
-        center/cover;
+      background: linear-gradient(rgba(8,24,45,.82), rgba(8,24,45,.82)),
+                  url("https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1800&q=85") center/cover;
       color: white;
     }
 
@@ -77,13 +130,14 @@
     }
 
     .hero h1 {
-      font-size: clamp(38px, 6vw, 68px);
-      line-height: 1.08;
+      font-size: clamp(36px, 5.5vw, 64px);
+      line-height: 1.1;
       margin-bottom: 20px;
+      font-weight: 800;
     }
 
     .hero p {
-      font-size: 19px;
+      font-size: 18px;
       max-width: 650px;
       margin-bottom: 28px;
       color: #e9eef5;
@@ -91,25 +145,30 @@
 
     .buttons {
       display: flex;
-      gap: 12px;
+      gap: 14px;
       flex-wrap: wrap;
     }
 
     .btn {
-      display: inline-block;
-      padding: 13px 22px;
-      border-radius: 9px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 24px;
+      border-radius: 30px;
       text-decoration: none;
       font-weight: 700;
-      transition: .2s;
+      transition: all .2s ease;
+      border: none;
+      cursor: pointer;
     }
 
     .btn-whatsapp {
-      background: #25D366;
+      background: var(--whatsapp);
       color: white;
     }
 
     .btn-whatsapp:hover {
+      background: var(--whatsapp-hover);
       transform: translateY(-2px);
     }
 
@@ -118,111 +177,174 @@
       color: #0b1f3a;
     }
 
+    .btn-light:hover {
+      background: #f1f5f9;
+      transform: translateY(-2px);
+    }
+
+    /* SECTIONS */
     section {
       padding: 70px 6%;
     }
 
     .section-title {
       text-align: center;
-      margin-bottom: 45px;
+      margin-bottom: 40px;
     }
 
     .section-title h2 {
-      font-size: 35px;
+      font-size: 36px;
       margin-bottom: 8px;
+      font-weight: 800;
     }
 
     .section-title p {
-      color: #657084;
+      color: var(--text-muted);
     }
 
+    /* BRANDS */
     .brands {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
       gap: 18px;
     }
 
     .brand {
-      background: white;
+      background: var(--card-bg);
       border-radius: 15px;
-      padding: 28px 15px;
+      padding: 25px 15px;
       text-align: center;
-      font-size: 22px;
+      font-size: 20px;
       font-weight: 800;
-      box-shadow: 0 7px 25px rgba(0,0,0,.07);
-      transition: .2s;
+      box-shadow: var(--shadow);
+      transition: all .3s ease;
+      border: 1px solid rgba(150,150,150,0.1);
     }
 
     .brand:hover {
       transform: translateY(-5px);
-      box-shadow: 0 12px 30px rgba(0,0,0,.12);
+      border-color: var(--primary-light);
     }
 
+    /* SEARCH & FILTER */
+    .search-container {
+      max-width: 500px;
+      margin: 0 auto 35px;
+      position: relative;
+    }
+
+    .search-container input {
+      width: 100%;
+      padding: 14px 20px;
+      border-radius: 30px;
+      border: 2px solid rgba(150,150,150,0.2);
+      background: var(--card-bg);
+      color: var(--text-main);
+      font-size: 1rem;
+      outline: none;
+      box-shadow: var(--shadow);
+      transition: border-color 0.3s;
+    }
+
+    .search-container input:focus {
+      border-color: var(--primary-light);
+    }
+
+    /* PRODUCTS */
     .products {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 25px;
     }
 
     .product-card {
-      background: white;
+      background: var(--card-bg);
       border-radius: 18px;
       overflow: hidden;
-      box-shadow: 0 7px 25px rgba(0,0,0,.08);
-      transition: .2s;
+      box-shadow: var(--shadow);
+      transition: all .3s ease;
+      border: 1px solid rgba(150,150,150,0.1);
+      display: flex;
+      flex-direction: column;
     }
 
     .product-card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-7px);
     }
 
     .product-img {
-      height: 190px;
+      height: 200px;
       background-size: cover;
       background-position: center;
     }
 
     .product-content {
       padding: 22px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
     }
 
     .product-content h3 {
       margin-bottom: 9px;
-      font-size: 21px;
+      font-size: 22px;
     }
 
     .product-content p {
-      color: #657084;
+      color: var(--text-muted);
       margin-bottom: 18px;
+      font-size: 0.95rem;
+      flex-grow: 1;
+    }
+
+    .card-actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
     }
 
     .small-btn {
-      display: inline-block;
-      padding: 10px 15px;
-      border-radius: 7px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 9px 14px;
+      border-radius: 8px;
       text-decoration: none;
-      background: #0b1f3a;
+      background: var(--primary);
       color: white;
-      font-weight: 700;
-      margin-right: 6px;
-      margin-bottom: 5px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+
+    [data-theme="dark"] .small-btn {
+      background: #334155;
     }
 
     .small-btn:hover {
-      background: #164d8b;
+      background: var(--primary-light);
     }
 
-    .whatsapp {
-      background: #25D366;
+    .small-btn.whatsapp {
+      background: var(--whatsapp);
     }
 
+    .small-btn.whatsapp:hover {
+      background: var(--whatsapp-hover);
+    }
+
+    /* ABOUT */
     .about {
-      background: #0b1f3a;
+      background: var(--primary);
       color: white;
     }
 
+    [data-theme="dark"] .about {
+      background: #1e293b;
+    }
+
     .about-grid {
-      max-width: 950px;
+      max-width: 900px;
       margin: auto;
       text-align: center;
     }
@@ -232,80 +354,109 @@
       font-size: 18px;
     }
 
+    /* CONTACT & FORM */
     .contact {
-      background: white;
+      background: var(--bg-color);
+    }
+
+    .contact-container {
+      max-width: 900px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
     }
 
     .contact-box {
-      max-width: 800px;
-      margin: auto;
-      background: #f5f7fa;
+      background: var(--card-bg);
       padding: 35px;
       border-radius: 20px;
       text-align: center;
+      box-shadow: var(--shadow);
     }
 
     .contact-box h3 {
-      font-size: 27px;
-      margin-bottom: 10px;
+      font-size: 24px;
+      margin-bottom: 15px;
     }
 
     .phone {
-      font-size: 28px;
+      font-size: 26px;
       font-weight: 800;
       margin: 15px 0 25px;
+      color: var(--primary-light);
     }
 
+    .quick-form {
+      background: var(--card-bg);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .quick-form h3 {
+      margin-bottom: 15px;
+      font-size: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group input, .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid rgba(150,150,150,0.3);
+      background: var(--bg-color);
+      color: var(--text-main);
+      outline: none;
+    }
+
+    /* FOOTER */
     footer {
       background: #071426;
       color: white;
       text-align: center;
-      padding: 28px 15px;
+      padding: 30px 15px;
     }
 
     footer p {
       color: #b8c4d3;
-      margin-top: 5px;
+      margin-top: 8px;
+      font-size: 0.9rem;
     }
 
+    /* FLOATING BUTTONS */
     .floating-whatsapp {
       position: fixed;
       right: 20px;
       bottom: 20px;
-      width: 58px;
-      height: 58px;
+      width: 60px;
+      height: 60px;
       border-radius: 50%;
-      background: #25D366;
+      background: var(--whatsapp);
       color: white;
       display: flex;
       align-items: center;
       justify-content: center;
       text-decoration: none;
-      font-size: 28px;
-      box-shadow: 0 5px 20px rgba(0,0,0,.25);
+      font-size: 30px;
+      box-shadow: 0 5px 20px rgba(0,0,0,.3);
       z-index: 2000;
+      transition: transform 0.3s;
     }
 
-    @media(max-width: 700px) {
-      nav {
-        display: none;
-      }
+    .floating-whatsapp:hover {
+      transform: scale(1.1);
+    }
 
-      .hero {
-        min-height: 560px;
-      }
-
-      section {
-        padding: 55px 5%;
-      }
-
-      .section-title h2 {
-        font-size: 29px;
-      }
-
-      .product-img {
-        height: 210px;
-      }
+    /* RESPONSIVE */
+    @media(max-width: 768px) {
+      .nav nav { display: none; }
+      .hero h1 { font-size: 32px; }
+      section { padding: 50px 5%; }
+      .contact-container { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -314,68 +465,50 @@
 
 <header>
   <div class="nav">
-
     <div class="logo">
+      <i class="fa-solid fa-boxes-packing" style="color: var(--accent);"></i>
       Hardik <span>Building Material</span>
     </div>
 
-    <nav>
-      <a href="#brands">Brands</a>
-      <a href="#products">Products</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
+    <div class="nav-right">
+      <nav>
+        <a href="#brands">Brands</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <!-- Dark Mode Toggle -->
+      <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+    </div>
   </div>
 </header>
 
 
 <!-- HERO -->
-
 <section class="hero">
-
   <div class="hero-content">
-
-    <h1>
-      Hardik Building<br>
-      Material Supplier
-    </h1>
-
-    <p>
-      Quality building, bathroom, kitchen, electrical,
-      plumbing and water-storage products from trusted brands.
-    </p>
-
+    <h1>Hardik Building<br>Material Supplier</h1>
+    <p>Quality building, bathroom, kitchen, electrical, plumbing and water-storage products from trusted brands.</p>
     <div class="buttons">
-
-      <a
-        class="btn btn-whatsapp"
-        href="https://wa.me/919887249240?text=Hello%20Hardik%20Building%20Material%20Supplier,%20I%20want%20to%20know%20about%20your%20products."
-        target="_blank">
-        📲 WhatsApp Enquiry
+      <a class="btn btn-whatsapp" href="https://wa.me/919887249240?text=Hello%20Hardik%20Building%20Material%20Supplier,%20I%20want%20to%20know%20about%20your%20products." target="_blank">
+        <i class="fa-brands fa-whatsapp"></i> WhatsApp Enquiry
       </a>
-
       <a class="btn btn-light" href="#products">
-        View Products
+        <i class="fa-solid fa-list"></i> View Products
       </a>
-
     </div>
-
   </div>
-
 </section>
 
 
 <!-- BRANDS -->
-
 <section id="brands">
-
   <div class="section-title">
     <h2>Our Brands</h2>
-    <p>Trusted brands available with us</p>
+    <p>Trusted national and international brands available with us</p>
   </div>
-
   <div class="brands">
-
     <div class="brand">HINDWARE</div>
     <div class="brand">GRAFDOER</div>
     <div class="brand">HAVELLS</div>
@@ -383,382 +516,225 @@
     <div class="brand">KAFF</div>
     <div class="brand">VECTUS</div>
     <div class="brand">ASTRAL</div>
-
   </div>
-
 </section>
 
 
-<!-- PRODUCTS -->
-
+<!-- PRODUCTS WITH SEARCH FILTER -->
 <section id="products">
-
   <div class="section-title">
-
     <h2>Our Product Range</h2>
-
-    <p>
-      Product photos and detailed catalogues can be viewed
-      through the respective brand websites.
-    </p>
-
+    <p>Browse through our categories or search for specific brands</p>
   </div>
 
+  <!-- Realtime Search Bar -->
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="🔍 Search brand (e.g. Havells, Kaff)..." onkeyup="filterProducts()">
+  </div>
 
-  <div class="products">
-
+  <div class="products" id="productList">
 
     <!-- HINDWARE -->
-
-    <div class="product-card">
-
-      <div
-        class="product-img"
-        style="background-image:url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=900&q=85')">
-      </div>
-
+    <div class="product-card" data-title="hindware">
+      <div class="product-img" style="background-image:url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=900&q=85')"></div>
       <div class="product-content">
-
         <h3>Hindware</h3>
-
-        <p>
-          Sanitaryware, faucets, showers, bathware,
-          kitchen solutions and more.
-        </p>
-
-        <a
-          class="small-btn"
-          href="https://hindware.com/"
-          target="_blank">
-          Official Products
-        </a>
-
-        <a
-          class="small-btn whatsapp"
-          href="https://wa.me/919887249240?text=Hello,%20I%20want%20Hindware%20products."
-          target="_blank">
-          WhatsApp
-        </a>
-
+        <p>Sanitaryware, faucets, showers, bathware, kitchen solutions and more.</p>
+        <div class="card-actions">
+          <a class="small-btn" href="https://hindware.com/" target="_blank"><i class="fa-solid fa-globe"></i> Official Site</a>
+          <a class="small-btn whatsapp" href="https://wa.me/919887249240?text=Hello,%20I%20want%20Hindware%20products." target="_blank"><i class="fa-brands fa-whatsapp"></i> Inquiry</a>
+        </div>
       </div>
-
     </div>
-
 
     <!-- GRAFDOER -->
-
-    <div class="product-card">
-
-      <div
-        class="product-img"
-        style="background-image:url('https://images.unsplash.com/photo-1603825491103-bd638b18789b?auto=format&fit=crop&w=900&q=85')">
-      </div>
-
+    <div class="product-card" data-title="grafdoer">
+      <div class="product-img" style="background-image:url('https://images.unsplash.com/photo-1603825491103-bd638b18789b?auto=format&fit=crop&w=900&q=85')"></div>
       <div class="product-content">
-
         <h3>Grafdoer</h3>
-
-        <p>
-          Faucets, showers, sanitaryware,
-          kitchen sinks, accessories and more.
-        </p>
-
-        <a
-          class="small-btn"
-          href="https://grafdoer.com/"
-          target="_blank">
-          Official Products
-        </a>
-
-        <a
-          class="small-btn whatsapp"
-          href="https://wa.me/919887249240?text=Hello,%20I%20want%20Grafdoer%20products."
-          target="_blank">
-          WhatsApp
-        </a>
-
+        <p>Faucets, showers, sanitaryware, kitchen sinks, accessories and more.</p>
+        <div class="card-actions">
+          <a class="small-btn" href="https://grafdoer.com/" target="_blank"><i class="fa-solid fa-globe"></i> Official Site</a>
+          <a class="small-btn whatsapp" href="https://wa.me/919887249240?text=Hello,%20I%20want%20Grafdoer%20products." target="_blank"><i class="fa-brands fa-whatsapp"></i> Inquiry</a>
+        </div>
       </div>
-
     </div>
-
 
     <!-- HAVELLS -->
-
-    <div class="product-card">
-
-      <div
-        class="product-img"
-        style="background-image:url('https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=900&q=85')">
-      </div>
-
+    <div class="product-card" data-title="havells">
+      <div class="product-img" style="background-image:url('https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=900&q=85')"></div>
       <div class="product-content">
-
         <h3>Havells</h3>
-
-        <p>
-          Fans, lighting, switches, wires & cables,
-          water heaters, appliances and more.
-        </p>
-
-        <a
-          class="small-btn"
-          href="https://www.havells.com/"
-          target="_blank">
-          Official Products
-        </a>
-
-        <a
-          class="small-btn whatsapp"
-          href="https://wa.me/919887249240?text=Hello,%20I%20want%20Havells%20products."
-          target="_blank">
-          WhatsApp
-        </a>
-
+        <p>Fans, lighting, switches, wires & cables, water heaters, appliances and more.</p>
+        <div class="card-actions">
+          <a class="small-btn" href="https://www.havells.com/" target="_blank"><i class="fa-solid fa-globe"></i> Official Site</a>
+          <a class="small-btn whatsapp" href="https://wa.me/919887249240?text=Hello,%20I%20want%20Havells%20products." target="_blank"><i class="fa-brands fa-whatsapp"></i> Inquiry</a>
+        </div>
       </div>
-
     </div>
-
 
     <!-- PASSERO -->
-
-    <div class="product-card">
-
-      <div
-        class="product-img"
-        style="background-image:url('https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=900&q=85')">
-      </div>
-
+    <div class="product-card" data-title="passero">
+      <div class="product-img" style="background-image:url('https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=900&q=85')"></div>
       <div class="product-content">
-
         <h3>Passero</h3>
-
-        <p>
-          Selected building and home improvement
-          products available on enquiry.
-        </p>
-
-        <a
-          class="small-btn whatsapp"
-          href="https://wa.me/919887249240?text=Hello,%20I%20want%20Passero%20products."
-          target="_blank">
-          Ask on WhatsApp
-        </a>
-
+        <p>Selected building and home improvement products available on enquiry.</p>
+        <div class="card-actions">
+          <a class="small-btn whatsapp" href="https://wa.me/919887249240?text=Hello,%20I%20want%20Passero%20products." target="_blank"><i class="fa-brands fa-whatsapp"></i> Ask on WhatsApp</a>
+        </div>
       </div>
-
     </div>
-
 
     <!-- KAFF -->
-
-    <div class="product-card">
-
-      <div
-        class="product-img"
-        style="background-image:url('https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=900&q=85')">
-      </div>
-
+    <div class="product-card" data-title="kaff">
+      <div class="product-img" style="background-image:url('https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=900&q=85')"></div>
       <div class="product-content">
-
         <h3>KAFF</h3>
-
-        <p>
-          Kitchen chimneys, hobs, ovens, dishwashers,
-          microwaves, cooktops and more.
-        </p>
-
-        <a
-          class="small-btn"
-          href="https://kaff.in/"
-          target="_blank">
-          Official Products
-        </a>
-
-        <a
-          class="small-btn whatsapp"
-          href="https://wa.me/919887249240?text=Hello,%20I%20want%20KAFF%20products."
-          target="_blank">
-          WhatsApp
-        </a>
-
+        <p>Kitchen chimneys, hobs, ovens, dishwashers, microwaves, cooktops and more.</p>
+        <div class="card-actions">
+          <a class="small-btn" href="https://kaff.in/" target="_blank"><i class="fa-solid fa-globe"></i> Official Site</a>
+          <a class="small-btn whatsapp" href="https://wa.me/919887249240?text=Hello,%20I%20want%20KAFF%20products." target="_blank"><i class="fa-brands fa-whatsapp"></i> Inquiry</a>
+        </div>
       </div>
-
     </div>
-
 
     <!-- VECTUS -->
-
-    <div class="product-card">
-
-      <div
-        class="product-img"
-        style="background-image:url('https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&w=900&q=85')">
-      </div>
-
+    <div class="product-card" data-title="vectus">
+      <div class="product-img" style="background-image:url('https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&w=900&q=85')"></div>
       <div class="product-content">
-
         <h3>Vectus</h3>
-
-        <p>
-          Water storage tanks, bathware, household,
-          road safety and gardening products.
-        </p>
-
-        <a
-          class="small-btn"
-          href="https://www.vectus.in/products"
-          target="_blank">
-          Official Products
-        </a>
-
-        <a
-          class="small-btn whatsapp"
-          href="https://wa.me/919887249240?text=Hello,%20I%20want%20Vectus%20products."
-          target="_blank">
-          WhatsApp
-        </a>
-
+        <p>Water storage tanks, bathware, household, road safety and gardening products.</p>
+        <div class="card-actions">
+          <a class="small-btn" href="https://www.vectus.in/products" target="_blank"><i class="fa-solid fa-globe"></i> Official Site</a>
+          <a class="small-btn whatsapp" href="https://wa.me/919887249240?text=Hello,%20I%20want%20Vectus%20products." target="_blank"><i class="fa-brands fa-whatsapp"></i> Inquiry</a>
+        </div>
       </div>
-
     </div>
-
 
     <!-- ASTRAL -->
-
-    <div class="product-card">
-
-      <div
-        class="product-img"
-        style="background-image:url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=900&q=85')">
-      </div>
-
+    <div class="product-card" data-title="astral">
+      <div class="product-img" style="background-image:url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=900&q=85')"></div>
       <div class="product-content">
-
         <h3>Astral</h3>
-
-        <p>
-          Plumbing pipes & fittings, drainage,
-          agriculture, water tanks, bathware and more.
-        </p>
-
-        <a
-          class="small-btn"
-          href="https://www.astralpipes.com/"
-          target="_blank">
-          Official Products
-        </a>
-
-        <a
-          class="small-btn whatsapp"
-          href="https://wa.me/919887249240?text=Hello,%20I%20want%20Astral%20products."
-          target="_blank">
-          WhatsApp
-        </a>
-
+        <p>Plumbing pipes & fittings, drainage, agriculture, water tanks, bathware and more.</p>
+        <div class="card-actions">
+          <a class="small-btn" href="https://www.astralpipes.com/" target="_blank"><i class="fa-solid fa-globe"></i> Official Site</a>
+          <a class="small-btn whatsapp" href="https://wa.me/919887249240?text=Hello,%20I%20want%20Astral%20products." target="_blank"><i class="fa-brands fa-whatsapp"></i> Inquiry</a>
+        </div>
       </div>
-
     </div>
 
-
   </div>
-
 </section>
 
 
 <!-- ABOUT -->
-
 <section class="about">
-
   <div class="about-grid">
-
     <div class="section-title">
-
-      <h2>Why Choose Hardik?</h2>
-
+      <h2 style="color: white;">Why Choose Hardik?</h2>
     </div>
-
-    <p>
-      We provide a wide range of building material,
-      bathroom, kitchen, electrical, plumbing and
-      water-storage products from trusted brands.
-      Contact us on WhatsApp for product availability,
-      latest models and enquiry.
-    </p>
-
+    <p>We provide a wide range of building material, bathroom, kitchen, electrical, plumbing and water-storage products from trusted national brands. Contact us directly for product availability, catalogue previews, and whole-sale inquiries.</p>
   </div>
-
 </section>
 
 
 <!-- CONTACT -->
-
 <section id="contact" class="contact">
-
   <div class="section-title">
-
     <h2>Contact Us</h2>
-
-    <p>For product enquiry and availability</p>
-
+    <p>Get in touch for instant order placement or pricing</p>
   </div>
 
-  <div class="contact-box">
-
-    <h3>Hardik Building Material Supplier</h3>
-
-    <div class="phone">
-      📱 9887249240
+  <div class="contact-container">
+    <div class="contact-box">
+      <h3>Hardik Building Material Supplier</h3>
+      <div class="phone"><i class="fa-solid fa-phone"></i> 9887249240</div>
+      <div class="buttons" style="justify-content:center">
+        <a class="btn btn-whatsapp" href="https://wa.me/919887249240?text=Hello%20Hardik%20Building%20Material%20Supplier,%20I%20want%20to%20make%20a%20product%20enquiry." target="_blank">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+        <a class="btn btn-light" href="tel:+919887249240">
+          <i class="fa-solid fa-phone-flip"></i> Call Now
+        </a>
+      </div>
     </div>
 
-    <div class="buttons" style="justify-content:center">
-
-      <a
-        class="btn btn-whatsapp"
-        href="https://wa.me/919887249240?text=Hello%20Hardik%20Building%20Material%20Supplier,%20I%20want%20to%20make%20a%20product%20enquiry."
-        target="_blank">
-        💬 Chat on WhatsApp
-      </a>
-
-      <a
-        class="btn btn-light"
-        href="tel:+919887249240">
-        📞 Call Now
-      </a>
-
+    <!-- Direct Direct WhatsApp Message Form -->
+    <div class="quick-form">
+      <h3>Send Direct WhatsApp Message</h3>
+      <form id="whatsappForm">
+        <div class="form-group">
+          <input type="text" id="custName" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <textarea id="custMsg" rows="3" placeholder="Which product or brand are you looking for?" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-whatsapp" style="width: 100%; justify-content: center;">
+          <i class="fa-paper-plane fa-solid"></i> Send Inquiry
+        </button>
+      </form>
     </div>
-
   </div>
-
 </section>
 
 
 <!-- FOOTER -->
-
 <footer>
-
   <strong>Hardik Building Material Supplier</strong>
-
-  <p>
-    Hindware • Grafdoer • Havells • Passero • KAFF • Vectus • Astral
-  </p>
-
-  <p>
-    © 2026 Hardik Building Material Supplier. All Rights Reserved.
-  </p>
-
+  <p>Hindware • Grafdoer • Havells • Passero • KAFF • Vectus • Astral</p>
+  <p>© 2026 Hardik Building Material Supplier. All Rights Reserved.</p>
 </footer>
 
 
 <!-- FLOATING WHATSAPP -->
-
-<a
-  class="floating-whatsapp"
-  href="https://wa.me/919887249240?text=Hello%20Hardik%20Building%20Material%20Supplier,%20I%20want%20to%20know%20about your products."
-  target="_blank"
-  aria-label="WhatsApp">
-  💬
+<a class="floating-whatsapp" href="https://wa.me/919887249240?text=Hello%20Hardik%20Building%20Material%20Supplier,%20I%20want%20to%20know%20about%20your%20products." target="_blank" aria-label="WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
 </a>
 
+
+<!-- JAVASCRIPT LOGIC -->
+<script>
+  // 1. Dark Theme Toggle
+  const themeToggleBtn = document.getElementById('themeToggle');
+  const themeIcon = themeToggleBtn.querySelector('i');
+
+  themeToggleBtn.addEventListener('click', () => {
+    let theme = document.documentElement.getAttribute('data-theme');
+    if (theme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'light');
+      themeIcon.className = 'fa-solid fa-moon';
+    } else {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      themeIcon.className = 'fa-solid fa-sun';
+    }
+  });
+
+  // 2. Realtime Search Filter
+  function filterProducts() {
+    let input = document.getElementById('searchInput').value.toLowerCase();
+    let cards = document.getElementsByClassName('product-card');
+
+    for (let i = 0; i < cards.length; i++) {
+      let title = cards[i].getAttribute('data-title');
+      if (title.includes(input)) {
+        cards[i].style.display = "flex";
+      } else {
+        cards[i].style.display = "none";
+      }
+    }
+  }
+
+  // 3. Direct Form to WhatsApp Redirect
+  document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    let name = document.getElementById('custName').value;
+    let msg = document.getElementById('custMsg').value;
+    let fullMsg = `Hello Hardik Building Material Supplier, My name is ${name}. ${msg}`;
+    let url = `https://wa.me/919887249240?text=${encodeURIComponent(fullMsg)}`;
+    window.open(url, '_blank');
+  });
+</script>
 
 </body>
 </html>
