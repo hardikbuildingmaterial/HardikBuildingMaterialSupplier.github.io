@@ -1,1 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Hardik Building Material Supplier</title>
+
+  <meta name="description"
+        content="Hardik Building Material Supplier - Hindware, Grafdoer, Havells, Passero, KAFF, Vectus and Astral products.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7fa;
+      color: #172033;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0b1f3a, #164d8b);
+      color: white;
+      padding: 18px 6%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 15px rgba(0,0,0,.15);
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 800;
+    }
+
+    .logo span {
+      color: #ffd166;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 18px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #ffd166;
+    }
+
+    .hero {
+      min-height: 500px;
+      display: flex;
+      align-items: center;
+      padding: 70px 6%;
+      background:
+        linear-gradient(rgba(8,24,45,.78), rgba(8,24,45,.78)),
+        url("https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 750px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 6vw, 68px);
+      line-height: 1.08;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 19px;
+      max-width: 650px;
+      margin-bottom: 28px;
+      color: #e9eef5;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 22px;
+      border-radius: 9px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: .2s;
+    }
+
+    .btn-whatsapp {
+      background: #25D366;
+      color: white;
+    }
+
+    .btn-whatsapp:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-light {
+      background: white;
+      color: #0b1f3a;
+    }
+
+    section {
+      padding: 70px 6%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 35px;
+      margin-bottom: 8px;
+    }
+
+    .section-title p {
+      color: #657084;
+    }
+
+    .brands {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 18px;
+    }
+
+    .brand {
+      background: white;
+      border-radius: 15px;
+      padding: 28px 15px;
+      text-align: center;
+      font-size: 22px;
+      font-weight: 800;
+      box-shadow: 0 7px 25px rgba(0,0,0,.07);
+      transition: .2s;
+    }
+
+    .brand:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0,0,0,.12);
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 25px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 7px 25px rgba(0,0,0,.08);
+      transition: .2s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-img {
+      height: 190px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .product-content {
+      padding: 22px;
+    }
+
+    .product-content h3 {
+      margin-bottom: 9px;
+      font-size: 21px;
+    }
+
+    .product-content p {
+      color: #657084;
+      margin-bottom: 18px;
+    }
+
+    .small-btn {
+      display: inline-block;
+      padding: 10px 15px;
+      border-radius: 7px;
+      text-decoration: none;
+      background: #0b1f3a;
+      color: white;
+      font-weight: 700;
+      margin-right: 6px;
+      margin-bottom: 5px;
+    }
+
+    .small-btn:hover {
+      background: #164d8b;
+    }
+
+    .whatsapp {
+      background: #25D366;
+    }
+
+    .about {
+      background: #0b1f3a;
+      color: white;
+    }
+
+    .about-grid {
+      max-width: 950px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .about p {
+      color: #d9e2ee;
+      font-size: 18px;
+    }
+
+    .contact {
+      background: white;
+    }
+
+    .contact-box {
+      max-width: 800px;
+      margin: auto;
+      background: #f5f7fa;
+      padding: 35px;
+      border-radius: 20px;
+      text-align: center;
+    }
+
+    .contact-box h3 {
+      font-size: 27px;
+      margin-bottom: 10px;
+    }
+
+    .phone {
+      font-size: 28px;
+      font-weight: 800;
+      margin: 15px 0 25px;
+    }
+
+    footer {
+      background: #071426;
+      color: white;
+      text-align: center;
+      padding: 28px 15px;
+    }
+
+    footer p {
+      color: #b8c4d3;
+      margin-top: 5px;
+    }
+
+    .floating-whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #25D366;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 28px;
+      box-shadow: 0 5px 20px rgba(0,0,0,.25);
+      z-index: 2000;
+    }
+
+    @media(max-width: 700px) {
+      nav {
+        display: none;
+      }
+
+      .hero {
+        min-height: 560px;
+      }
+
+      section {
+        padding: 55px 5%;
+      }
+
+      .section-title h2 {
+        font-size: 29px;
+      }
+
+      .product-img {
+        height: 210px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+
+    <div class="logo">
+      Hardik <span>Building Material</span>
+    </div>
+
+    <nav>
+      <a href="#brands">Brands</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <h1>
+      Hardik Building<br>
+      Material Supplier
+    </h1>
+
+    <p>
+      Quality building, bathroom, kitchen, electrical,
+      plumbing and water-storage products from trusted brands.
+    </p>
+
+    <div class="buttons">
+
+      <a
+        class="btn btn-whatsapp"
+        href="https://wa.me/919887249240?text=Hello%20Hardik%20Building%20Material%20Supplier,%20I%20want%20to%20know%20about%20your%20products."
+        target="_blank">
+        📲 WhatsApp Enquiry
+      </a>
+
+      <a class="btn btn-light" href="#products">
+        View Products
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- BRANDS -->
+
+<section id="brands">
+
+  <div class="section-title">
+    <h2>Our Brands</h2>
+    <p>Trusted brands available with us</p>
+  </div>
+
+  <div class="brands">
+
+    <div class="brand">HINDWARE</div>
+    <div class="brand">GRAFDOER</div>
+    <div class="brand">HAVELLS</div>
+    <div class="brand">PASSERO</div>
+    <div class="brand">KAFF</div>
+    <div class="brand">VECTUS</div>
+    <div class="brand">ASTRAL</div>
+
+  </div>
+
+</section>
+
+
+<!-- PRODUCTS -->
+
+<section id="products">
+
+  <div class="section-title">
+
+    <h2>Our Product Range</h2>
+
+    <p>
+      Product photos and detailed catalogues can be viewed
+      through the respective brand websites.
+    </p>
+
+  </div>
+
+
+  <div class="products">
+
+
+    <!-- HINDWARE -->
+
+    <div class="product-card">
+
+      <div
+        class="product-img"
+        style="background-image:url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=900&q=85')">
+      </div>
+
+      <div class="product-content">
+
+        <h3>Hindware</h3>
+
+        <p>
+          Sanitaryware, faucets, showers, bathware,
+          kitchen solutions and more.
+        </p>
+
+        <a
+          class="small-btn"
+          href="https://hindware.com/"
+          target="_blank">
+          Official Products
+        </a>
+
+        <a
+          class="small-btn whatsapp"
+          href="https://wa.me/919887249240?text=Hello,%20I%20want%20Hindware%20products."
+          target="_blank">
+          WhatsApp
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- GRAFDOER -->
+
+    <div class="product-card">
+
+      <div
+        class="product-img"
+        style="background-image:url('https://images.unsplash.com/photo-1603825491103-bd638b18789b?auto=format&fit=crop&w=900&q=85')">
+      </div>
+
+      <div class="product-content">
+
+        <h3>Grafdoer</h3>
+
+        <p>
+          Faucets, showers, sanitaryware,
+          kitchen sinks, accessories and more.
+        </p>
+
+        <a
+          class="small-btn"
+          href="https://grafdoer.com/"
+          target="_blank">
+          Official Products
+        </a>
+
+        <a
+          class="small-btn whatsapp"
+          href="https://wa.me/919887249240?text=Hello,%20I%20want%20Grafdoer%20products."
+          target="_blank">
+          WhatsApp
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- HAVELLS -->
+
+    <div class="product-card">
+
+      <div
+        class="product-img"
+        style="background-image:url('https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=900&q=85')">
+      </div>
+
+      <div class="product-content">
+
+        <h3>Havells</h3>
+
+        <p>
+          Fans, lighting, switches, wires & cables,
+          water heaters, appliances and more.
+        </p>
+
+        <a
+          class="small-btn"
+          href="https://www.havells.com/"
+          target="_blank">
+          Official Products
+        </a>
+
+        <a
+          class="small-btn whatsapp"
+          href="https://wa.me/919887249240?text=Hello,%20I%20want%20Havells%20products."
+          target="_blank">
+          WhatsApp
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- PASSERO -->
+
+    <div class="product-card">
+
+      <div
+        class="product-img"
+        style="background-image:url('https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=900&q=85')">
+      </div>
+
+      <div class="product-content">
+
+        <h3>Passero</h3>
+
+        <p>
+          Selected building and home improvement
+          products available on enquiry.
+        </p>
+
+        <a
+          class="small-btn whatsapp"
+          href="https://wa.me/919887249240?text=Hello,%20I%20want%20Passero%20products."
+          target="_blank">
+          Ask on WhatsApp
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- KAFF -->
+
+    <div class="product-card">
+
+      <div
+        class="product-img"
+        style="background-image:url('https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=900&q=85')">
+      </div>
+
+      <div class="product-content">
+
+        <h3>KAFF</h3>
+
+        <p>
+          Kitchen chimneys, hobs, ovens, dishwashers,
+          microwaves, cooktops and more.
+        </p>
+
+        <a
+          class="small-btn"
+          href="https://kaff.in/"
+          target="_blank">
+          Official Products
+        </a>
+
+        <a
+          class="small-btn whatsapp"
+          href="https://wa.me/919887249240?text=Hello,%20I%20want%20KAFF%20products."
+          target="_blank">
+          WhatsApp
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- VECTUS -->
+
+    <div class="product-card">
+
+      <div
+        class="product-img"
+        style="background-image:url('https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&w=900&q=85')">
+      </div>
+
+      <div class="product-content">
+
+        <h3>Vectus</h3>
+
+        <p>
+          Water storage tanks, bathware, household,
+          road safety and gardening products.
+        </p>
+
+        <a
+          class="small-btn"
+          href="https://www.vectus.in/products"
+          target="_blank">
+          Official Products
+        </a>
+
+        <a
+          class="small-btn whatsapp"
+          href="https://wa.me/919887249240?text=Hello,%20I%20want%20Vectus%20products."
+          target="_blank">
+          WhatsApp
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- ASTRAL -->
+
+    <div class="product-card">
+
+      <div
+        class="product-img"
+        style="background-image:url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=900&q=85')">
+      </div>
+
+      <div class="product-content">
+
+        <h3>Astral</h3>
+
+        <p>
+          Plumbing pipes & fittings, drainage,
+          agriculture, water tanks, bathware and more.
+        </p>
+
+        <a
+          class="small-btn"
+          href="https://www.astralpipes.com/"
+          target="_blank">
+          Official Products
+        </a>
+
+        <a
+          class="small-btn whatsapp"
+          href="https://wa.me/919887249240?text=Hello,%20I%20want%20Astral%20products."
+          target="_blank">
+          WhatsApp
+        </a>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about">
+
+  <div class="about-grid">
+
+    <div class="section-title">
+
+      <h2>Why Choose Hardik?</h2>
+
+    </div>
+
+    <p>
+      We provide a wide range of building material,
+      bathroom, kitchen, electrical, plumbing and
+      water-storage products from trusted brands.
+      Contact us on WhatsApp for product availability,
+      latest models and enquiry.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+
+  <div class="section-title">
+
+    <h2>Contact Us</h2>
+
+    <p>For product enquiry and availability</p>
+
+  </div>
+
+  <div class="contact-box">
+
+    <h3>Hardik Building Material Supplier</h3>
+
+    <div class="phone">
+      📱 9887249240
+    </div>
+
+    <div class="buttons" style="justify-content:center">
+
+      <a
+        class="btn btn-whatsapp"
+        href="https://wa.me/919887249240?text=Hello%20Hardik%20Building%20Material%20Supplier,%20I%20want%20to%20make%20a%20product%20enquiry."
+        target="_blank">
+        💬 Chat on WhatsApp
+      </a>
+
+      <a
+        class="btn btn-light"
+        href="tel:+919887249240">
+        📞 Call Now
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <strong>Hardik Building Material Supplier</strong>
+
+  <p>
+    Hindware • Grafdoer • Havells • Passero • KAFF • Vectus • Astral
+  </p>
+
+  <p>
+    © 2026 Hardik Building Material Supplier. All Rights Reserved.
+  </p>
+
+</footer>
+
+
+<!-- FLOATING WHATSAPP -->
+
+<a
+  class="floating-whatsapp"
+  href="https://wa.me/919887249240?text=Hello%20Hardik%20Building%20Material%20Supplier,%20I%20want%20to%20know%20about your products."
+  target="_blank"
+  aria-label="WhatsApp">
+  💬
+</a>
+
+
+</body>
+</html>
